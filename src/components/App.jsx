@@ -17,6 +17,18 @@ class App extends Component {
     }));
   };
 
+  total = () => {
+    const { good, neutral, bad } = this.state;
+
+    return good + neutral + bad;
+  };
+
+  positivePercentage = () => {
+    const { good, neutral, bad } = this.state;
+
+    return console.log('positivePercentage:', parseInt((good / (good + neutral + bad)) * 100));
+  };
+
   render() {
     return (
       <div
@@ -39,6 +51,8 @@ class App extends Component {
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
+          total={this.total}
+          positivePercentage={this.positivePercentage}
         />
       </div>
     );
