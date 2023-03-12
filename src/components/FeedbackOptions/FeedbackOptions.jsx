@@ -1,9 +1,19 @@
 import css from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ options, title, onClick }) => {
+const FeedbackOptions = ({ options, onClick }) => {
   return (
-    <ul className={css.button}>
-      {title && <h2>{title}</h2>}
+    <ul
+      className={css.button}
+      style={{
+        // height: '100vh',
+        display: 'flex',
+        justifyContent: 'left',
+
+        // alignItems: 'top',
+        // fontSize: 40,
+        // color: '#010101',
+      }}
+    >
       {options.map((option, index) => (
         <li key={index}>
           <button type="button" name={option} value={option} onClick={onClick}>
