@@ -40,6 +40,8 @@ class App extends Component {
           alignItems: 'top',
           fontSize: 40,
           color: '#010101',
+          marginLeft: '80px',
+          marginTop: '50px',
         }}
       >
         <Section title="Please leave feedback">
